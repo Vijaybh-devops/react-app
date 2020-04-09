@@ -3,10 +3,10 @@ services:
   - docker
 
 before_install:
-  - docker build -t travisimage -f Dockerfile.dev .
+  - docker build -t vijaybhdevops/travisimage -f Dockerfile.dev .
 
 scripts:
-  - docker run -it -e CI=true travisimage npm run test
+  - docker run -it -e CI=true vijaybhdevops/travisimage npm run test
 
 deploy:
   provider: elasticbeanstalk
